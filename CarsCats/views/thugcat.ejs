@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>thug</title>
+</head>
+<body>
+    <h1>Detail Page for <%= thug[0].name%></h1>
+    <div>
+        <img src="thugcat.jpg" alt="thug">
+    </div>
+        <p>Favorite food: <%= thug[1].favfood%></p>
+        <p>Age: <%= thug[2].age %></p>
+        <div>
+            <p>Sleeping spots:</p>
+            <% for (var x in thug[3].sleepingspots){ %>
+                <p><%= thug[3].sleepingspots[x] %></p>
+            <% } %>
+        </div>
+</body>
+</html>

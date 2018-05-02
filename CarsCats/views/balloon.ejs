@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon</title>
+</head>
+<body>
+    <h1>Detail Page for <%= balloon[0].name%></h1>
+    <div>
+        <img src="cat1.jpg" alt="balloon">
+    </div>
+        <p>Favorite food: <%= balloon[1].favfood%></p>
+        <p>Age: <%= balloon[2].age %></p>
+        <div>
+            <p>Sleeping spots:</p>
+            <% for (var x in balloon[3].sleepingspots){ %>
+                <p><%= balloon[3].sleepingspots[x] %></p>
+            <% } %>
+        </div>
+</body>
+</html>

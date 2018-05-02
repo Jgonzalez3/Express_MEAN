@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>killa</title>
+</head>
+<body>
+    <h1>Detail Page for <%= killa[0].name%></h1>
+    <div>
+        <img src="cat2.jpg" alt="killa">
+    </div>
+        <p>Favorite food: <%= killa[1].favfood%></p>
+        <p>Age: <%= killa[2].age %></p>
+        <div>
+            <p>Sleeping spots:</p>
+            <% for (var x in killa[3].sleepingspots){ %>
+                <p><%= killa[3].sleepingspots[x] %></p>
+            <% } %>
+        </div>
+</body>
+</html>
