@@ -20,14 +20,14 @@ app.get('/', function(req, res) {
         res.render("index");
 })
 app.get('/result', function(req, res) {
-        //grab session data and put into object to render in HTML
+        //grab session data to render in HTML
         var survey = req.session.surveydata
         console.log(survey);
         res.render("results", {survey:survey});
 })
 // post route for adding a user
 app.post('/survey', function(req, res) {
-        //post form data here into session
+        //post form data here into session req.body is form data
         console.log("POST DATA", req.body);
         req.session.surveydata = req.body;        
         res.redirect('/result');
